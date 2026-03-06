@@ -22,4 +22,3 @@ If not already provided by the user, ask what the assignment will be about.
 ## Step 3: Update Website Configuration
 
 Update the assignments list in [config.json](../../config.json) website configuration file to include the new assignment. For the dueDate field, use the current date plus 7 days unless specified otherwise.
-

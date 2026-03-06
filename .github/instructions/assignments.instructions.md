@@ -1,27 +1,24 @@
 ---
-applyTo: "assignments/**/*.md"
+agent: agent
+description: Create a new programming homework assignment
+argument-hint: Provide assignment details
 ---
 
-# Assignment Markdown Structure Guidelines
+# Create New Programming Assignment
 
-All assignment markdown files should follow these guidelines:
+Your goal is to generate a new homework assignment for the Mergington High School students.
 
-## 1. Template Usage
+## Step 1: Gather Assignment Information
 
-- Assignment markdown files must follow the structure in [`templates/assignment-template.md`](../../templates/assignment-template.md).
-- The assignment must be created as a `README.md` file
-- Do not remove or skip required sections from the template.
+If not already provided by the user, ask what the assignment will be about.
 
-## 2. Section Guidance
+## Step 2: Create Assignment Structure
 
-The section headers should reflect the structure in the template, including the exact icon usage.
+1. Create a new directory in the `assignments` folder with a unique name based on the assignment topic
+1. Create a new file in the directory named `README.md` with the structure from the [assignment-template.md](../../templates/assignment-template.md) file
+1. Fill out the assignment details in the README file
+1. (Optional) Add starter code or attachments if the assignment needs them - add these files to the same assignment folder
 
-- **Title**: Replace `[Assignment Title]` with a short, descriptive name (e.g., `Python Basics`, `Loops and Conditionals`, `Functions and Modules`).
-- **Objective**: Write 1-2 sentences summarizing what the student will learn or accomplish. Focus on the main skills or concepts.
-- **Tasks**: For each task:
-   - Use a specific, action-oriented task name
-   - In the Description, clearly state what the student must do.
-   - In Requirements, use bullet points to list the expected outcomes or features. Be specific and measurable
-   - Provide example input/output in code blocks if helpful.
+## Step 3: Update Website Configuration
 
-Do not include extra sections unless explicitly specified.
+Update the assignments list in [config.json](../../config.json) website configuration file to include the new assignment. For the dueDate field, use the current date plus 7 days unless specified otherwise.
